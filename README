@@ -3,7 +3,7 @@ Simple native Kernel#callsite for Ruby MRI
 
   http://github.com/methodmissing/callsite
 
-This library works with Ruby 1.8 ( Ruby 1.9 support is pending )
+This library works with Ruby 1.8 ( Ruby 1.9 support is pending ).Work in progress.
 
 Examples :
 
