@@ -16,9 +16,12 @@ end
 task :test => :build
 
 namespace :build do
+  file "#{CS_ROOT}/callsite.h"
+  file "#{CS_ROOT}/callsite_18.h"
+  file "#{CS_ROOT}/callsite_19.h"
   file "#{CS_ROOT}/callsite.c"
   file "#{CS_ROOT}/extconf.rb"
-  file "#{CS_ROOT}/Makefile" => %W(#{CS_ROOT}/callsite.c #{CS_ROOT}/extconf.rb) do
+  file "#{CS_ROOT}/Makefile" => %W(#{CS_ROOT}/callsite.h #{CS_ROOT}/callsite_18.h #{CS_ROOT}/callsite_19.h #{CS_ROOT}/callsite.c #{CS_ROOT}/extconf.rb) do
     Dir.chdir(CS_ROOT) do
       ruby 'extconf.rb'
     end

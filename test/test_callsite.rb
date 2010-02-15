@@ -1,3 +1,4 @@
+$:.unshift "." # 1.9.2
 require File.dirname(__FILE__) + '/helper'
 
 class TestCallsite < Test::Unit::TestCase
