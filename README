@@ -1,15 +1,17 @@
 Simple native Kernel#callsite for Ruby MRI
-  (c) 2009 Lourens Naudé (methodmissing)
+  (c) 2009, 2010 Lourens Naudé (methodmissing)
 
   http://github.com/methodmissing/callsite
 
-This library works with Ruby 1.8 ( Ruby 1.9 support is pending ).Work in progress.
+This library works with Ruby 1.8.
 
 Examples :
 
   callsite() #=> -612079380
   callsite() #=> -612079378
   callsite() #=> -612079376
+  callsite(5) #=> -1165103632  # only hash against the last 5 stack frames
+  callsite(20) #=> 0           # less than 20 stack frames
 
 To run the test suite:
 
@@ -22,4 +24,3 @@ To run the benchmarks:
 Todo :
 
   Account for the last function arguments ( ala super )
-  Optimal backtrace size
